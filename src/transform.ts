@@ -54,7 +54,7 @@ class ImageBlock {
   createNode = async () => {
 
     if (fs.existsSync(this.imgFile)) {
-      console.log("Reusing image file [" + this.imgFile + "].");
+      //console.log("Reusing image file [" + this.imgFile + "].");
     } else {
       const imgText = await this.getImage();
 

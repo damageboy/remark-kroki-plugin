@@ -48,7 +48,7 @@ class ImageBlock {
         });
         this.createNode = () => __awaiter(this, void 0, void 0, function* () {
             if (fs_1.default.existsSync(this.imgFile)) {
-                console.log("Reusing image file [" + this.imgFile + "].");
+                //console.log("Reusing image file [" + this.imgFile + "].");
             }
             else {
                 const imgText = yield this.getImage();
