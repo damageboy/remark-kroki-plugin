@@ -1,4 +1,4 @@
-declare type OptionString = string | undefined;
+type OptionString = string | undefined;
 export interface KrokiOptions {
     krokiBase: string;
     imgDir: string;

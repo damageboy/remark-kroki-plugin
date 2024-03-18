@@ -42,7 +42,7 @@ class ImageBlock {
         this.getImage = () => __awaiter(this, void 0, void 0, function* () {
             if (this.options.verbose)
                 console.log("Fetching image from kroki @ " + this.krokiUrl + " ...");
-            const response = yield node_fetch_1.default(this.krokiUrl, {
+            const response = yield (0, node_fetch_1.default)(this.krokiUrl, {
                 method: 'POST',
                 body: this.imageCode,
                 headers: { 'Content-Type': 'text/plain' }
@@ -114,7 +114,7 @@ const transform = (options) => (tree, vfile) => new Promise((resolve) => __await
             nodesToChange.push(kb);
         }
     };
-    unist_util_visit_1.default(tree, 'code', visitor);
+    (0, unist_util_visit_1.default)(tree, 'code', visitor);
     // Now go over the collected nodes and change them 
     for (const kb of nodesToChange) {
         yield kb.createNode(vfile);
